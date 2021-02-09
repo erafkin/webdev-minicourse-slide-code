@@ -10,6 +10,10 @@ class App extends Component {
     }
   }
    fetchData = () => {
+     // It will take an indeterminate amount of time for axios to get the data
+     // so we use this then/catch format
+     // this says: hit this endpoint. Then when you're done do X. 
+     // If there is an error at any point, do Y
       axios.get("https://poetrydb.org/random")
       .then((response) => {
         console.log(response);
